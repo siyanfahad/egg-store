@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: egg-store-api
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: master
+    dockerfilePath: ./backend/egg-store-backend/Dockerfile
+    dockerContext: ./backend/egg-store-backend
+    healthCheckPath: /api/v1/products
+    autoDeploy: true
+    envVars:
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://sufiyankamran07.github.io

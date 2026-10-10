@@ -49,7 +49,7 @@ export default function Home() {
         <div className="relative flex items-center justify-center">
           <div className="w-64 h-64 rounded-full bg-gold/15 overflow-hidden border-8 border-white shadow-sm">
             <img
-              src="/images/products/assorted-eggs.jpg"
+              src={`${import.meta.env.BASE_URL}images/products/assorted-eggs.jpg`}
               alt="Fresh eggs in a carton"
               className="h-full w-full object-cover"
             />
