@@ -22,7 +22,8 @@ guarantee of lifelong free or uninterrupted hosting.
 ## 2. Deploy the Java API on Render
 
 1. In Render, create a Blueprint from this GitHub repository and select
-   `render.yaml`.
+   `render.yaml`. The API is configured for Ohio to stay close to a Neon
+   database hosted in AWS Ohio (`us-east-2`).
 2. When prompted, enter `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` using the
    Neon connection details. Render generates `JWT_SECRET` automatically.
 3. Wait for the API deployment to become healthy. Its public URL will look like

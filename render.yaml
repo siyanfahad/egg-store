@@ -3,7 +3,7 @@ services:
     name: egg-store-api
     runtime: docker
     plan: free
-    region: oregon
+    region: ohio
     branch: master
     dockerfilePath: ./backend/egg-store-backend/Dockerfile
     dockerContext: ./backend/egg-store-backend
