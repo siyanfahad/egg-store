@@ -1,0 +1,13 @@
+# Local environment files; keep the example templates
+**/.env
+**/.env.*
+!**/.env.example
+
+# Generated dependencies and build output
+**/node_modules/
+**/dist/
+**/target/
+
+# IDE and local artifacts
+**/.idea/
+*.log

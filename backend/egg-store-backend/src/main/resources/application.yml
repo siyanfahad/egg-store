@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: egg-store-backend
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/eggstore}
+    username: ${DB_USERNAME:eggstore}
+    password: ${DB_PASSWORD:}          # never commit a real value — inject via env var / secrets manager
+
+  jpa:
+    hibernate:
+      ddl-auto: update               # use Flyway/Liquibase migrations in real environments, not auto-ddl
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: ${PORT:8080}
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:}             # required — set via env var, min 256-bit random value
+    access-token-validity-ms: 900000   # 15 minutes
+    refresh-token-validity-ms: 604800000  # 7 days
+
+  razorpay:
+    key-id: ${RAZORPAY_KEY_ID:}
+    key-secret: ${RAZORPAY_KEY_SECRET:}      # server-side only, never sent to frontend
+    webhook-secret: ${RAZORPAY_WEBHOOK_SECRET:}
