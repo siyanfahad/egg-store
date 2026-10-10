@@ -44,10 +44,10 @@ guarantee of lifelong free or uninterrupted hosting.
    deployment source.
 3. Run **Actions → Deploy frontend to GitHub Pages → Run workflow**. Subsequent
    changes to frontend files on `master` deploy automatically.
-4. The site URL is `https://sufiyankamran07.github.io/egg-store/`.
+4. The site URL is `https://siyanfahad.github.io/egg-store/`.
 
 The API's `CORS_ALLOWED_ORIGINS` is configured for
-`https://sufiyankamran07.github.io`. Do not add the `/egg-store/` path to that
+`https://siyanfahad.github.io`. Do not add the `/egg-store/` path to that
 origin.
 
 ## Free-tier behavior and secrets
