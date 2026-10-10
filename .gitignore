@@ -11,3 +11,6 @@
 # IDE and local artifacts
 **/.idea/
 *.log
+.neon
+.env.local
+node_modules/
